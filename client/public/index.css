@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: theme('colors.background.DEFAULT');
+    color: theme('colors.gray.800');
+    line-height: 1.6;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .blood-group-a {
+    @apply bg-red-600 text-white font-semibold;
+  }
+
+  .blood-group-b {
+    @apply bg-red-500 text-white font-semibold;
+  }
+
+  .blood-group-ab {
+    @apply bg-red-400 text-white font-semibold;
+  }
+
+  .blood-group-o {
+    @apply bg-red-700 text-white font-semibold;
+  }
+
+  .blood-group-a-minus {
+    @apply bg-red-900 text-white font-semibold;
+  }
+
+  .blood-group-b-minus {
+    @apply bg-red-800 text-white font-semibold;
+  }
+
+  .blood-group-ab-minus {
+    @apply bg-red-700 text-white font-semibold;
+  }
+
+  .blood-group-o-minus {
+    @apply bg-red-800 text-white font-semibold;
+  }
+
+  .status-critical {
+    @apply bg-red-100 text-red-800 border-red-200;
+  }
+
+  .status-high {
+    @apply bg-orange-100 text-orange-800 border-orange-200;
+  }
+
+  .status-normal {
+    @apply bg-green-100 text-green-800 border-green-200;
+  }
+
+  .status-pending {
+    @apply bg-yellow-100 text-yellow-800 border-yellow-200;
+  }
+
+  .status-delivered {
+    @apply bg-blue-100 text-blue-800 border-blue-200;
+  }
+
+  .status-completed {
+    @apply bg-purple-100 text-purple-800 border-purple-200;
+  }
+}
